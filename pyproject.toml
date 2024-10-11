@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "honey"
+version = "0.1.0"
+description = "honey using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = {extras = ["tools"], version = "^0.67.1"}
+elevenlabs-s3 = "^0.2.0"
+
+[tool.poetry.scripts]
+honey = "honey.main:run"
+run_crew = "honey.main:run"
+train = "honey.main:train"
+replay = "honey.main:replay"
+test = "honey.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

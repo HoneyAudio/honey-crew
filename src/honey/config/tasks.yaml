@@ -1,0 +1,14 @@
+generate_text:
+  description: >
+    Generate a personalized, nice text in the specified category `{category}`, in language `{language}`. Personalize the text with the user's name `{user_name}` if provided, or use affectionate terms suitable for `{user_gender}` if no name is provided.
+  expected_output: >
+    Output only the generated text and nothing else.
+  agent: text_agent
+
+tts_and_update:
+  description: >
+    Use ElevenLabs TTS to convert the generated text into speech, using the specified `voice_gender` and `language`, and upload the audio file to AWS S3.
+  expected_output: >
+    **Output only the confirmation JSON message formatted as markdown without '```', and nothing else.**
+
+  agent: text_agent
